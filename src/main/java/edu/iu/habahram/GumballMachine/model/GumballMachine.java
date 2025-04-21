@@ -37,8 +37,8 @@ public class GumballMachine implements IGumballMachine {
     public TransitionResult ejectQuarter() {
         boolean succeeded = false;
         String message = "";
-
         if (state.equalsIgnoreCase(HAS_QUARTER)) {
+            System.out.println("Inside Has quarter");
             message = "You ejected a quarter";
             succeeded = true;
             state = NO_QUARTER;
