@@ -84,4 +84,9 @@ public class GumballMachine2 implements IGumballMachine{
             }
         }
     }
+
+    @Override
+    public void refill(int count){
+        this.count += count;
+    }
 }

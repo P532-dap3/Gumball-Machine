@@ -108,5 +108,10 @@ public class GumballMachine implements IGumballMachine {
         this.count = this.count - 1;
     }
 
+    @Override
+    public void refill(int count){
+        this.count += count;
+    }
+
 
 }
