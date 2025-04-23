@@ -8,5 +8,5 @@ public interface IGumballMachine {
     Integer getCount();
     String getTheStateName();
 
-    TransitionResult dispense();
+    void releaseBall();
 }

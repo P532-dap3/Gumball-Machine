@@ -85,7 +85,6 @@ public class GumballMachine implements IGumballMachine {
         return null;
     }
 
-    @Override
     public TransitionResult dispense() {
         boolean succeeded = false;
         String message = "";
@@ -102,6 +101,11 @@ public class GumballMachine implements IGumballMachine {
             succeeded = true;
         }
         return new TransitionResult(succeeded, message, state, count);
+    }
+
+    @Override
+    public void releaseBall(){
+        this.count = this.count - 1;
     }
 
 
