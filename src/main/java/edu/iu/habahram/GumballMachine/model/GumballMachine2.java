@@ -56,8 +56,10 @@ public class GumballMachine2 implements IGumballMachine{
 
     @Override
     public TransitionResult turnCrank() {
-        state.turnCrank();
-        return state.dispense();
+        if(state.turnCrank().succeeded()){
+            return state.dispense();
+        }
+        return new TransitionResult(false, "Turn Crank is not successful", this.getTheStateName(), this.count);
     }
 
     @Override
